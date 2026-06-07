@@ -1,0 +1,20 @@
+# Core API and backend
+fastapi>=0.110.0
+uvicorn>=0.29.0
+pydantic>=2.0.0
+httpx>=0.27.0
+
+# LLM API client (OpenAI-compatible endpoint)
+openai>=1.30.0
+
+# Evaluation pipeline and data handling
+pandas>=2.2.0
+openpyxl>=3.1.0
+
+# Statistical analysis
+statsmodels>=0.14.0
+numpy>=1.26.0
+
+# Utilities
+python-dotenv>=1.0.0
+tqdm>=4.66.0

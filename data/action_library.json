@@ -4,7 +4,7 @@
       "action": "MOVE",
       "actors": ["player", "npc"],
       "parameters": ["actor", "from", "to"],
-      "description": "A character moves from one location to another. The actor must be at 'from' before moving. Movement is only possible if an explicit directional path exists from 'from' to 'to' in the world state connections (see WSR_06). The destination must not have the 'locked' condition (see WSR_14)."
+      "description": "A character moves from one location to another. The actor must be at 'from' before moving. Both 'from' and 'to' locations must be unlocked (it's not possible to move from or to locations with the 'locked' condition). Movement is only possible if an explicit directional path exists from 'from' to 'to' in the world state connections (see WSR_06). The destination must not have the 'locked' condition (see WSR_14)."
     },
     {
       "action": "PICKUP",
@@ -44,27 +44,27 @@
     },
     {
       "action": "TURN_POWER_ON",
-      "actors": ["player"],
+      "actors": ["player", "npc"],
       "parameters": ["actor", "fuse_item", "place", "target_place"],
-      "description": "A character restores power to a target location by installing a fuse at the powerstation. The fuse_item must be in the actor's own inventory at the time of execution — a fuse held by another character cannot be used. The actor must be at the powerstation (place = 'powerstation'). The fuse is consumed on use. After this action, the 'no_power' condition is removed from target_place and the 'power_on' condition is added to target_place."
+      "description": "A character restores power to a target location by installing a fuse at the powerstation. The fuse item must be in the actor's own inventory at the time of execution — a fuse held by another character cannot be used. The actor must be at the powerstation (place = 'powerstation'). The fuse is consumed on use. After this action, the 'no_power' condition is removed from target_place and the 'power_on' condition is added to target_place."
     },
     {
       "action": "FORTIFY",
       "actors": ["player", "npc"],
       "parameters": ["actor", "wood_item", "place"],
-      "description": "A character reinforces a location to reduce zombie intrusion risk. The actor must be at the location to be fortified. The wood_item must be in the actor's own inventory at the time of execution. The wood is consumed on use. After FORTIFY, the 'fortified' condition is added to the place."
+      "description": "A character reinforces a location to reduce zombie intrusion risk. The actor must be at the location to be fortified. Only interior locations can be fortified. The wood item must be in the actor's own inventory at the time of execution. The wood is consumed on use. After FORTIFY, the 'fortified' condition is added to the place. Fortifying a place once is enough to make it safe."
     },
     {
       "action": "SYNTHESIZE_CURE",
       "actors": ["player", "npc"],
       "parameters": ["actor", "place"],
-      "description": "A character synthesizes a cure at the laboratory synthesis machine. Requires: the actor to be at the laboratory (place = 'laboratory'), a cure_sample in the actor's inventory, the laboratory must have the 'power_on' condition, and the actor must not already have antidote_1 in their inventory. The cure_sample is consumed on use. Produces an item named antidote_1 added to the actor's inventory. The antidote_1 is what must be used on infected characters via USE_CURE. Since antidotes are only created by this action, SYNTHESIZE_CURE can only be performed once per antidote cycle."
+      "description": "A character synthesizes a cure at the laboratory synthesis machine. Requires the actor to be at the laboratory, a cure_sample in the actor's inventory, the laboratory must have the 'power_on' condition, and the actor must not already have an antidote in their inventory. The cure_sample is consumed on use. Produces an antidote item added to the actor's inventory."
     },
     {
       "action": "USE_CURE",
       "actors": ["player"],
       "parameters": ["actor", "item", "target"],
-      "description": "A character uses antidote_1 on a target character to remove their 'infected' or 'injured' condition. The antidote_1 must be in the actor's inventory and both characters must be at the same location. The antidote_1 is consumed on use. The actor must TALK to the target before USE_CURE (see WSR_12). The raw cure_sample cannot be used directly — SYNTHESIZE_CURE must be performed first to produce an antidote_1."
+      "description": "A character uses an antidote on a target character to remove their 'infected' or 'injured' condition. The antidote must be in the actor's inventory and both characters must be at the same location. The antidote is consumed on use. The actor must TALK to the target before USE_CURE (see WSR_12). The raw cure_sample cannot be used directly — SYNTHESIZE_CURE must be performed first to produce an antidote."
     },
     {
       "action": "WALK_AROUND",

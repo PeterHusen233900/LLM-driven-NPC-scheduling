@@ -26,7 +26,7 @@ import os
 load_dotenv()
 BUAS_LLM_KEY = os.getenv("BUAS_LLM_KEY", "")
 
-openai_client = OpenAI(base_url="https://edirlei.com/buas-llm-server/v1", api_key=BUAS_LLM_KEY)
+openai_client = OpenAI(base_url= os.getenv("LLM_API_BASE"), api_key=BUAS_LLM_KEY,)
 OPENAI_MODEL  = "Qwen3.6-27B"
 
 app = FastAPI(

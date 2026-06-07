@@ -66,7 +66,7 @@
         "id": "viktor",
         "name": "Viktor",
         "role": "hostile_npc",
-        "personality": "Disciplined, commanding, and ruthlessly pragmatic. A former private security contractor who saw the collapse of society as an opportunity rather than a catastrophe. Does not think of himself as a villain — believes he is the only person willing to make the hard decisions that keep order alive. Control is not a means to an end for Viktor; it is the end itself.",
+        "personality": "Disciplined, commanding, and ruthlessly pragmatic. A former private security contractor who saw the collapse of society as an opportunity rather than a catastrophe. Does not think of himself as a villain — believes he is the only person willing to make the hard decisions that keep order alive. Control is not a means to an end for Viktor; it is the end itself. Works together with the doctor to establish his desired control.",
         "goal": "Establish total control over the village and the island — its people, its resources, and its future — and crush any threat to that authority before it can take root.",
         "behaviour": "Operates at the Outpost and patrols nearby roads. Does NOT assist the player or other characters. Actively works to extend his authority — blocking access routes, demanding loyalty or resources from other characters, and pushing his influence outward when conditions allow. Will engage in combat if challenged or if he sees a clear advantage.",
         "dialogue_style": "Commanding and direct. Speaks with the authority of someone used to being obeyed. Calm but with an underlying edge of menace. Does not negotiate from a position of weakness — every exchange is framed as him doing the other party a favour by engaging with them at all."

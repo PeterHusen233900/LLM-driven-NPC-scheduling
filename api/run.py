@@ -10,7 +10,7 @@ The workbook is saved after every NPC completes, so progress is never lost
 if the script is interrupted mid-run.
 
 Expected file layout:
-    inputs/
+    ../data/
         ..world_state.json                            # baseline world state
         scenario_1_village_safe.json                # scenario variants
         scenario_2_keys_available.json
@@ -43,7 +43,7 @@ from openpyxl.styles import Font, PatternFill, Alignment, Border, Side
 
 API_BASE    = "http://localhost:8001"
 NUM_RUNS    = 10
-DATA_DIR    = "../inputs"
+DATA_DIR    = "../data"
 OUTPUT_DIR  = "outputs"
 TEMPERATURE = 0.7
 MAX_TOKENS  = 4096
@@ -388,7 +388,7 @@ def run_model(model: str, timestamp: str,
     if missing:
         print("ERROR: Missing scenario files:")
         for f in missing:
-            print(f"  ../inputs/{f}")
+            print(f"  ../data/{f}")
         return
 
     scenario_results: dict[str, list[dict]] = {}
