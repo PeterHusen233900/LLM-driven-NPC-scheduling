@@ -18,7 +18,7 @@ LLM-driven-NPC-scheduling/
 │   ├── validator.py                        # Deterministic rule-based validator (ROOT/CASCADING classification)
 │   ├── run.py                              # Evaluation runner — multi-model, multi-scenario, incremental xlsx saving
 │   ├── generate_qualitative_sample.py      # Stratified weighted sampler for qualitative review
-│   ├── z-value_calculation.py              # Two-proportion z-test for full vs minimal ruleset comparison
+│   ├── z-value_calculation.ipynb              # Two-proportion z-test for full vs minimal ruleset comparison
 │   ├── quest_generation.py                 # Shared pipeline structure (not part of this project's evaluation)
 │   └── .env.example                        # Environment variable template
 │
@@ -202,12 +202,8 @@ This produces `scoring/qualitative_sample_640.xlsx` with a stratified, diversity
 
 To reproduce the statistical analysis:
 
-```bash
-cd api
-python z-value_calculation.py
-```
 
-Open `api/z-value_calculation.py` in Jupyter and run all cells. This calculates the two-proportion z-test comparing full versus minimal ruleset validity rates for all four models.
+Open `api/z-value_calculation.ipynb` in Jupyter and run all cells. This calculates the two-proportion z-test comparing full versus minimal ruleset validity rates for all four models.
 
 ---
 
