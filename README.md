@@ -241,19 +241,4 @@ The dominant failure mode across models was world-state reasoning rather than ru
 
 The full academic paper is available at: `[link to paper]`
 
----
 
-## Licence
-
-The game prototype is built on LÖVE2D (MIT licence) and adapts prior work by Lima et al. (2014, 2019, 2022b).  
-All four evaluated models are released under open licences (Apache 2.0 or Llama 3.3 Community Licence).  
-This repository is released for academic and research purposes.
-
----
-
-## Citation
-
-```
-Husen, P. (2026). LLM-Driven NPC Scheduling in Structured Game Worlds.
-Breda University of Applied Sciences.
-```
