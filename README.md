@@ -239,6 +239,6 @@ The dominant failure mode across models was world-state reasoning rather than ru
 
 ## Paper
 
-The full academic paper is available at: `[link to paper]`
+The full academic paper is available at in the docs folder
 
 
