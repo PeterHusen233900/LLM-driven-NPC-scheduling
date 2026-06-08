@@ -16,7 +16,12 @@ This repository contains the implementation and evaluation pipeline for the grad
 │   ├── action_library.json                      # Available NPC actions with parameter definitions
 │   ├── world_rules.json                         # Full world rules (16 entries)
 │   ├── world_rules_minimal.json                 # Minimal world rules (10 physically-enforced constraints)
-│   └── characters.json                          # Unified NPC character descriptions (8 NPCs)
+│   ├── characters.json                          # Unified NPC character descriptions (8 NPCs)
+│   ├── world_state.json                             # Baseline world state
+│   ├── scenario_1_village_safe.json                 # Village safe scenario
+│   ├── scenario_2_keys_available.json               # Keys available scenario
+│   ├── scenario_3_village_safe_keys_available.json  # Village safe and keys available scenario
+│   └── scenario_4_high_threat.json                  # High threat scenario
 ├── api/
 │   ├── npc_generation.py                        # FastAPI backend — /generate and /validate endpoints
 │   ├── quest_generation.py                      # Shared pipeline structure (not part of this project's evaluation)
