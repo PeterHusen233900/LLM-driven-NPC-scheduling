@@ -31,6 +31,9 @@ This repository contains the implementation and evaluation pipeline for the grad
     ├── validator.py                             # Deterministic rule-based validator (ROOT/CASCADING classification)
     ├── generate_qualitative_sample.py           # Stratified weighted sampler for qualitative review
     └── z_value_calculation.py                   # Two-proportion z-test for full vs minimal ruleset comparison
+    └── results/
+        └── outputs                             # Contains the quantitative results
+        └── scoring                             # Containts the qualitative evaluation
 ```
 
 ---
