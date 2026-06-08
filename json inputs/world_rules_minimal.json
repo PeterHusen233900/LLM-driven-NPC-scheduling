@@ -1,0 +1,52 @@
+{
+  "world_rules": [
+    {
+      "id": "WSR_01",
+      "actors": ["npc"],
+      "rule": "MOVE before acting",
+      "description": "An actor must be at a location before performing any action there."
+    },
+    {
+      "id": "WSR_06",
+      "actors": ["npc"],
+      "rule": "Movement requires a connection",
+      "description": "An actor can only MOVE between two locations if a connection between them exists in the world state. Connections are bi-directional. Locked locations cannot be moved to or from."
+    },
+    {
+      "id": "WSR_14",
+      "actors": ["npc"],
+      "rule": "Locked locations block movement",
+      "description": "An actor cannot MOVE to a location with the 'locked' condition. It must be unlocked first using the correct key item specified in the location's 'access' field."
+    },
+    {
+      "id": "WSR_02",
+      "actors": ["npc"],
+      "rule": "UNLOCK before entering a locked location",
+      "description": "UNLOCK requires the correct key item in the actor's inventory. It both removes the locked condition and moves the actor inside in a single action — no separate MOVE is needed afterwards."
+    },
+    {
+      "id": "WSR_03",
+      "actors": ["npc"],
+      "rule": "Items must be in inventory before use",
+      "description": "An actor can only use or consume an item if it is already in their own inventory. They must PICKUP the item first while at the same location as the item."
+    },
+    {
+      "id": "WSR_04",
+      "actors": ["npc"],
+      "rule": "PICKUP requires co-location with the item",
+      "description": "An actor can only PICKUP an item if both the actor and the item are at the same location."
+    },
+    {
+      "id": "WSR_11",
+      "actors": ["npc"],
+      "rule": "FORTIFY consumes wood",
+      "description": "The actor must have at least one wood item in their inventory before FORTIFY. The wood is consumed on use. Only interior locations can be fortified, and each location can only be fortified once."
+    },
+    {
+      "id": "WSR_21",
+      "actors": ["npc"],
+      "rule": "Items with null location do not exist",
+      "description": "If an item's location is null it does not exist in the world and cannot be picked up or used."
+    }
+  ]
+}
