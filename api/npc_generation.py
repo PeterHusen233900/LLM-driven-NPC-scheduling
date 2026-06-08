@@ -31,13 +31,13 @@ from pydantic import BaseModel, Field
 from dotenv import load_dotenv
 
 load_dotenv()
-BUAS_LLM_KEY = os.getenv("BUAS_LLM_KEY", "")
+LLM_KEY = os.getenv(LLM_KEY", "")
 
 # ---------------------------------------------------------------------------
 # Configuration
 # ---------------------------------------------------------------------------
 
-openai_client = OpenAI(base_url= os.getenv("LLM_API_BASE"), api_key=BUAS_LLM_KEY,)
+openai_client = OpenAI(base_url= os.getenv("LLM_API_BASE"), api_key=LLM_KEY,)
 OPENAI_MODEL = "Qwen3.6-27B" #"Qwen3.5-122B"
 MAX_RETRIES   = 3
 
